@@ -14266,7 +14266,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, we intend to use Naive Bayes Classifier to analyze "Divar" site ads and categorize them, and try to predict the category using the data we have about the title and description of each ad. .</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, we intend to use <strong>Naive Bayes Classifier</strong> to analyze the articles of the <em>Digikala Mag</em> site and categorize them, and try to predict the category using the data we have about the content of each article.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14517,7 +14517,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Phase-1:-Data-preprocessing">Phase 1: Data preprocessing<a class="anchor-link" href="#Phase-1:-Data-preprocessing">&#182;</a></h2><p>Merging title and description and removing the title and description columns so our processes will be done on the new merged column named  'all'. All preprocesses are done below. We finding the numbers of each word in each class that will be needed for calculationg probability.</p>
+<h2 id="Phase-1:-Data-preprocessing">Phase 1: Data preprocessing<a class="anchor-link" href="#Phase-1:-Data-preprocessing">&#182;</a></h2><p>All preprocesses are done below. We finding the numbers of each word in each class that will be needed for calculationg probability.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14715,8 +14715,8 @@ Name: validity_without_additive_smoothing, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-2:">Question 2:<a class="anchor-link" href="#Question-2:">&#182;</a></h3><p>Posterior: Probability of a word belonging to the mentioned categories given the word. We can decide the category of a text or in other words a new set of words by comparing this probability for our 6 categories.</p>
-<p>Prior: Probabilty of the category occurrence in general. This value can be calculated or simply be 1/6 meaning that we'll assign equal probability to occurrence of each category.</p>
+<h3 id="Question-2:">Question 2:<a class="anchor-link" href="#Question-2:">&#182;</a></h3><p>Posterior: Probability of a word belonging to the mentioned categories given the word. We can decide the category of a text or in other words a new set of words by comparing this probability for our 4 categories.</p>
+<p>Prior: Probabilty of the category occurrence in general. This value can be calculated or simply be 1/4 meaning that we'll assign equal probability to occurrence of each category.</p>
 <p>Likelihood: It's the probability of a word occurring given the category. So it's the number of that word occurring in one of the categories divided by the number of all the words in the same category.</p>
 <p>Evidence: Probability of the word itself which is the number of that word occurring in the dataset. Because this number is independent of the class and we are going to compare probability of the classes given the same words this number would be the same in both sides of the comparison so we can ignore it and never calculate it meaning that here we can calculate and compare everything without this value.</p>
 
