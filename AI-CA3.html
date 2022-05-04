@@ -14587,8 +14587,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-1:">Question 1:<a class="anchor-link" href="#Question-1:">&#182;</a></h3><p>Stemming tries to remove postfix of words to generate the main parts them but sometimes there can be some mistakes or shall we say undesired outputs. Stemming won't do the same thing as lemmatization with verbs but for noun it's partially the same.</p>
-<p>Lemmatization is a way of getting the root of words. This procedure is very useful with verbs. Also this procedure can be useful with noun. For nouns what we need is the main part of it meaning that we don't want the plural words or any other part of speech connected to it. Lemmatization will remove all these unnecessary parts and gives us the main part of each part of speech.</p>
+<h3 id="Question-1:">Question 1:<a class="anchor-link" href="#Question-1:">&#182;</a></h3><p><strong>Stemming</strong> tries to remove postfix of words to generate the main parts them but sometimes there can be some mistakes or shall we say undesired outputs. Stemming won't do the same thing as lemmatization with verbs but for noun it's partially the same.</p>
+<p><strong>Lemmatization</strong> is a way of getting the root of words. This procedure is very useful with verbs. Also this procedure can be useful with noun. For nouns what we need is the main part of it meaning that we don't want the plural words or any other part of speech connected to it. Lemmatization will remove all these unnecessary parts and gives us the main part of each part of speech.</p>
 <p>Lemmatization usually refers to doing things properly with the use of a vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and to return the base or dictionary form of a word, which is known as the lemma. Stemming usually refers to a crude heuristic process that chops off the ends of words in the hope of achieving this goal correctly most of the time not all the time, and often includes the removal of derivational affixes.</p>
 
 </div>
@@ -14715,17 +14715,17 @@ Name: validity_without_additive_smoothing, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-2:">Question 2:<a class="anchor-link" href="#Question-2:">&#182;</a></h3><p>Posterior: Probability of a word belonging to the mentioned categories given the word. We can decide the category of a text or in other words a new set of words by comparing this probability for our 4 categories.</p>
-<p>Prior: Probabilty of the category occurrence in general. This value can be calculated or simply be 1/4 meaning that we'll assign equal probability to occurrence of each category.</p>
-<p>Likelihood: It's the probability of a word occurring given the category. So it's the number of that word occurring in one of the categories divided by the number of all the words in the same category.</p>
-<p>Evidence: Probability of the word itself which is the number of that word occurring in the dataset. Because this number is independent of the class and we are going to compare probability of the classes given the same words this number would be the same in both sides of the comparison so we can ignore it and never calculate it meaning that here we can calculate and compare everything without this value.</p>
+<h3 id="Question-2:">Question 2:<a class="anchor-link" href="#Question-2:">&#182;</a></h3><p><strong>Posterior:</strong> Probability of a word belonging to the mentioned categories given the word. We can decide the category of a text or in other words a new set of words by comparing this probability for our 4 categories.</p>
+<p><strong>Prior:</strong> Probabilty of the category occurrence in general. This value can be calculated or simply be 1/4 meaning that we'll assign equal probability to occurrence of each category.</p>
+<p><strong>Likelihood:</strong> It's the probability of a word occurring given the category. So it's the number of that word occurring in one of the categories divided by the number of all the words in the same category.</p>
+<p><strong>Evidence:</strong> Probability of the word itself which is the number of that word occurring in the dataset. Because this number is independent of the class and we are going to compare probability of the classes given the same words this number would be the same in both sides of the comparison so we can ignore it and never calculate it meaning that here we can calculate and compare everything without this value.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-3:">Question 3:<a class="anchor-link" href="#Question-3:">&#182;</a></h3><p>The best we can do is to fight back and bring in sky high success. The sky is beautiful today.</p>
-<p>Since the report is in English, English examples are provided</p>
+<h3 id="Question-3:">Question 3:<a class="anchor-link" href="#Question-3:">&#182;</a></h3><p><em>The best we can do is to fight back and bring in sky high success. The sky is beautiful today.</em></p>
+<p><em>Since the report is in English, English examples are provided.</em></p>
 <p>Here the word sky can show the need for bigrams or n-grams clearly. By using unigrams, in both of the examples the sky will mean as the blue sky above us. Although this meaning is correct for the second sentence, there's a different situation in the first sentence. In the fisrt one, sky is an adverb for the word high and simply means very. So the only way we can correctly guess the meaning of the word is by using n-grams and showing that the there words sky, high and success are dependent. In the mentioned example bigrams aren't adequate since it'll only give us sky high, we know that this is and adjective but we still don't know to what word so using 3-grams will do the trick.</p>
 
 </div>
@@ -14739,7 +14739,7 @@ The reason is that $log(0) = - \infty$ so the sum $ sum_{i=1}^{n} log(P(x_i | c)
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-5:">Question 5:<a class="anchor-link" href="#Question-5:">&#182;</a></h3><p>Additive smoothing is a technique for smoothing categorical data. In additive smoothing we are trying to prevent zero probability. A small-sample correction will be incorporated in every probability estimate. Consequently, no probability will be zero and this really comes in handy since there can be new words in the test dataset that we haven't seen in the train dataset, this is a way of regularizing Naive Bayes.</p>
+<h3 id="Question-5:">Question 5:<a class="anchor-link" href="#Question-5:">&#182;</a></h3><p><strong>Additive smoothing</strong> is a technique for smoothing categorical data. In additive smoothing we are trying to prevent zero probability. A small-sample correction will be incorporated in every probability estimate. Consequently, no probability will be zero and this really comes in handy since there can be new words in the test dataset that we haven't seen in the train dataset, this is a way of regularizing Naive Bayes.</p>
 <p>This'll be achieved by changing the way we calculate probability of each word given the class. By adding alpha which is greater zero it's guaranteed that the probability for each word won't be zero:</p>
 $$ p(word|class) = \frac{word + \alpha}{N + \alpha.D} $$<ul>
 <li>alpha is coefficient that is greater than zero and usually less than 1.</li>
@@ -14861,22 +14861,22 @@ $$ p(word|class) = \frac{word + \alpha}{N + \alpha.D} $$<ul>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-7:">Question 7:<a class="anchor-link" href="#Question-7:">&#182;</a></h3><p>Precision can be seen as a measure of exactness or quality but recall is a measure of completeness or quantity meaning high precision shows that an algorithm returned substantially more relevant results than irrelevant ones but high recall means that an algorithm returned most of the relevant results.</p>
+<h3 id="Question-7:">Question 7:<a class="anchor-link" href="#Question-7:">&#182;</a></h3><p><strong>Precision</strong> can be seen as a measure of exactness or quality but <strong>recall</strong> is a measure of completeness or quantity meaning high precision shows that an algorithm returned substantially more relevant results than irrelevant ones but high recall means that an algorithm returned most of the relevant results.</p>
 <p>For example lets assume that we are creating a model to classify banking transactions into Fraud and Not Fraud classes.
 ussually there is a little percent of fraud transactions in the whole transactions data.</p>
-<p>Recall = frauds correctly identified / (frauds correctly identified + frauds incorrectly labeled as not frauds)</p>
+<p><strong>Recall</strong> = frauds correctly identified / (frauds correctly identified + frauds incorrectly labeled as not frauds)</p>
 <p>Lets assume that our model lablels every transaction as fraud so according to the earlier equation we have a recall of 100%
 But obiously this is not a good model because we are false labeling lots of none fraud transactions and interrupt them. And according to the Precision formula:</p>
-<p>Precision = frauds correctly identified / (frauds correctly identified + transactions incorrectly labeled as fraud)</p>
+<p><strong>Precision</strong> = frauds correctly identified / (frauds correctly identified + transactions incorrectly labeled as fraud)</p>
 <p>We see that we are getting a really low precision but a high recall and its not a good model.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Question-8:">Question 8:<a class="anchor-link" href="#Question-8:">&#182;</a></h3><p>The F1 score is the harmonic mean of the precision and recall.The highest possible value of an F-score is 1, indicating perfect precision and recall, and the lowest possible value is 0, if either the precision or the recall is zero. We use this mean method so a model with recall 100% and precision 0% gets a low score. And punishes the extreme value that was high at the cost of the other value.
+<h3 id="Question-8:">Question 8:<a class="anchor-link" href="#Question-8:">&#182;</a></h3><p>The <strong>F1</strong> score is the harmonic mean of the <strong>precision</strong> and <strong>recall</strong>.The highest possible value of an <em>F-score</em> is 1, indicating perfect precision and recall, and the lowest possible value is 0, if either the precision or the recall is zero. We use this mean method so a model with recall 100% and precision 0% gets a low score. And punishes the extreme value that was high at the cost of the other value.
 If we used the normal mean equation we will end up on a value that is higher and its not a good metric because we don't want both of precision and recall to be more than a certain threshold. 
-The F1 score kinda combines recall and precision and it's a better score to meausure our model predictions.</p>
+The <em>F1 score</em> kinda combines recall and precision and it's a better score to meausure our model predictions.</p>
 
 </div>
 </div>
